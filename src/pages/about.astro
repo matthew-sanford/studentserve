@@ -15,43 +15,18 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <p class="text-lg leading-relaxed text-slate-500">
+        We provide access and resources for students looking to get involved in their community. Created by high school students, StudentServe understands the importance of volunteering -- which is why we created a simple-to-use platform for volunteers and organizations to get connected. Search volunteer opportunities near you, find resources, and more.
+      </p>
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+        How it works
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        If you're a student, you can simply register to view available volunteer opportunities near you using your school-issued email. Once you've found where you want to get involved, simply apply to join on our platform and await your response!<br><br>For organizations looking for volunteers, fill out the short <a>registration form</a> and we'll do the rest. Your organization's listings will appear on our platform-- 100% free.
       </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
     </div>
   </Container>
 </Layout>
