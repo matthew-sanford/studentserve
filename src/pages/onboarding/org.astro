@@ -1,0 +1,51 @@
+---
+import Onboardingform from "@components/org-join.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Create a listing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">List on StudentServe</Fragment>
+      <Fragment slot="desc">Learn more about our platform <a href="/about" class="text-blue-600">here</a>.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Connect your organization</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Welcome to StudentServe! Our team will review and publish your listing directly to our app using the information provided.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:clock-two" />
+            <span>You'll receive an email when your listing is published.</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-6 h-6" name="uil:location-pin-alt" />
+            <span>We currently only accept positions based in the SF Bay Area, CA or remote.</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-6 h-6" name="uil:shield-check" />
+            <span>An internal check will be ran to verify the validity of your organization.</span>
+          </div>
+          
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope-question" />
+            <span>Need help?       <a
+              href="/contact"
+              class="text-blue-600"
+              >Contact our team.</a
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Onboardingform />
+      </div>
+    </div>
+  </Container>
+</Layout>

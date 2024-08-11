@@ -2,6 +2,7 @@
 import { Picture } from "astro:assets";
 import heroImage from "assets/Charity.png";
 import Link from "@components/ui/link.astro";
+import Button from "@components/ui/button.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -26,14 +27,13 @@ import { Icon } from "astro-icon/components";
       StudentServe connects passionate high school students with local volunteer organizations to get involved. Launching in the San Francisco Bay Area in 2024.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        class="flex gap-1 items-center justify-center cursor-not-allowed"
-        rel="noopener">
+      <Button
+        class="flex gap-1 items-center justify-center"
+        onclick="my_modal_5.showModal()">
         <Icon class="text-white w-5 h-5" name="bx:timer" />
 
          Volunteer Now
-      </Link>
+    </Button>
       <Link
         size="lg"
         style="outline"
@@ -45,4 +45,16 @@ import { Icon } from "astro-icon/components";
       </Link>
     </div>
   </div>
+  <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Volunteer listings unavailable...</h3>
+      <p class="py-4">StudentServe plans to fully release the volunteer listing platform late 2024.</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
 </main>
