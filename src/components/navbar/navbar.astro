@@ -6,8 +6,16 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
+    title: "Volunteer Listings",
+    path: "/listings",
+  },
+  {
     title: "About",
     path: "/about",
+  },
+  {
+    title: "Create a listing",
+    path: "/onboarding/org",
   },
   {
     title: "Contact",
@@ -40,7 +48,6 @@ const menuitems = [
                       <span> {item.title}</span>
                     </a>
                   </li>
-              </>
             ))
           }
         </ul>

@@ -27,34 +27,39 @@ import { Icon } from "astro-icon/components";
       StudentServe connects passionate high school students with local volunteer organizations to get involved. Launching in the San Francisco Bay Area in 2024.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Button
-        class="flex gap-1 items-center justify-center"
-        onclick="my_modal_5.showModal()">
-        <Icon class="text-white w-5 h-5" name="bx:timer" />
-
-         Volunteer Now
-    </Button>
+      <Link
+        size="lg"
+        style="primary"
+        rel="noopener"
+        href="/listings/"
+        class="flex gap-1 items-center justify-center">
+      <Icon class="text-white w-5 h-5" name="bx:timer" />
+        Volunteer Now
+      </Link>
       <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="#"
+        href="/listings/studentserve-marketing-director"
         class="flex gap-1 items-center justify-center">
         <Icon class="text-black w-4 h-4" name="bx:code" />
          Work with us
       </Link>
     </div>
   </div>
+
+  <!--
   <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Volunteer listings unavailable...</h3>
       <p class="py-4">StudentServe plans to fully release the volunteer listing platform late 2024.</p>
       <div class="modal-action">
         <form method="dialog">
-          <!-- if there is a button in form, it will close the modal -->
+          if there is a button in form, it will close the modal
           <button class="btn">Close</button>
         </form>
       </div>
     </div>
   </dialog>
+ -->
 </main>
